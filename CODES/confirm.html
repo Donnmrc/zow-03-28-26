@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #F9F6F1 0%, #E8DCC8 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            padding: 40px;
+        }
+
+        .message {
+            color: #8B7355;
+            font-size: 3.5em;
+            margin-bottom: 60px;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-family: 'Georgia', 'Garamond', serif;
+        }
+
+        .crying-cat-gif {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            padding: 15px 50px;
+            font-size: 1.2em;
+            background-color: #D9BFA8;
+            color: #6B5649;
+            border: 2px solid #6B5649;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: #CCAD94;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(107, 86, 73, 0.15);
+        }
+
+        .button:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="crying-cat.gif" alt="Crying cat" class="crying-cat-gif">
+        <p class="message">I promise you'll really like it</p>
+        <button class="button" onclick="window.location.href='index.html'">Okay</button>
+    </div>
+</body>
+</html>

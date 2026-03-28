@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower for Zoe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content {
+            text-align: center;
+            color: #6B5649;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        .favorite-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .fact-bubble {
+            padding: 18px 25px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 2px solid #8B7BA8;
+            border-radius: 50px;
+            line-height: 1.6;
+            font-size: 0.9em;
+            color: #6B5649;
+            font-family: 'Montserrat', sans-serif;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .fact-bubble:hover {
+            transform: scale(1.05);
+            background-color: white;
+        }
+
+        .lily-img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 15px 35px rgba(107, 86, 73, 0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            padding: 12px 24px;
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #6B5649;
+            border: 1.5px solid #6B5649;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background-color: #6B5649;
+            color: white;
+        }
+
+        .facts-column {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .content { flex-direction: column; }
+            .facts-column { width: 100%; order: 2; }
+            .center-column { order: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-button">← Back</a>
+
+    <div class="content">
+        <div class="facts-column">
+            <div class="fact-bubble">Lilies come in over 100 species</div>
+            <div class="fact-bubble">They symbolize rebirth and fertility</div>
+            <div class="fact-bubble">Lilies can bloom for weeks</div>
+            <div class="fact-bubble">They're popular in wedding bouquets</div>
+        </div>
+        
+        <div class="center-column" style="text-align: center;">
+            <h2>Lily</h2>
+            <img src="lily.png" alt="Lily Flower" class="lily-img">
+            <p class="favorite-text">Your favorite flower</p>
+        </div>
+        
+        <div class="facts-column">
+            <div class="fact-bubble">Lilies have a sweet fragrance</div>
+            <div class="fact-bubble">They're native to Asia and Europe</div>
+            <div class="fact-bubble">Each flower has 6 petals</div>
+            <div class="fact-bubble">They prefer well-drained soil</div>
+        </div>
+    </div>
+
+</body>
+</html>

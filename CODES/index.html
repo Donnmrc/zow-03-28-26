@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container { text-align: center; padding: 40px 20px; }
+
+        h1 {
+            color: #6B5649;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 40px;
+            font-size: 3.2em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            width: 170px;
+            height: 170px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(107, 86, 73, 0.1);
+            overflow: hidden;
+        }
+
+        .box:hover {
+            transform: translateY(-12px) scale(1.05);
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .box img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        /* This ensures if the image is missing, it shows a clean box */
+        .box img[alt]:after {  
+            display: block;
+            content: "🎵"; /* Fallback emoji if image is broken */
+            font-size: 50px;
+        }
+
+        .footer-text {
+            color: #6B5649;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 450px) {
+            .box { width: 145px; height: 145px; }
+            h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>these are for you baby!</h1>
+        
+        <div class="boxes-grid">
+            <div class="box" onclick="navigate('picture.html')">
+                <img src="camera_icon.png" alt="Picture">
+            </div>
+            <div class="box" onclick="navigate('flower.html')">
+                <img src="flower_icon.png" alt="Flower">
+            </div>
+            <div class="box" onclick="navigate('music.html')">
+                <img src="music_icon.png" alt="Music"> </div>
+            <div class="box" onclick="navigate('message.html')">
+                <img src="message_icon.png" alt="Message">
+            </div>
+        </div>
+
+        <p class="footer-text">i hope you like it, i love you zoe</p>
+    </div>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
